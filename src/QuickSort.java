@@ -18,6 +18,7 @@ System.out.println("ith:"+data[999]);
 			int j=getPivotPosition(data, start, end);
 		 quickSort(data, start, j-1);
 		 quickSort(data, j+1, end);
+		 
 	}
 	}
 	public static int getPivotPosition(int[] data,int start,int end){

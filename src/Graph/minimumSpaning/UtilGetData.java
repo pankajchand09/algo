@@ -11,7 +11,7 @@ public class UtilGetData {
 public static GeneralGraph getData(String filename,boolean undirected) throws IOException{
 	BufferedReader reader=new  BufferedReader(new FileReader(filename));
 	String str=reader.readLine();
-	
+	String tmp;
 	GeneralGraph g=new GeneralGraph(Integer.parseInt(str));
 	while((str=reader.readLine())!=null){
 		String[] coordinates=str.split(" ");
@@ -19,8 +19,7 @@ public static GeneralGraph getData(String filename,boolean undirected) throws IO
 		int des=Integer.parseInt(coordinates[1]);
 		int weight=Integer.parseInt(coordinates[2]);
 		g.addEdge(source-1, des-1, weight,undirected);
-		
-		
+	
 	}
 return g;
 }
