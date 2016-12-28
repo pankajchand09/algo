@@ -6,13 +6,13 @@ import java.util.List;
 class GeneralGraph{
 	int N;
 	List<NodeGeneric> adjMatrix[];
-	ArrayList<NodeGeneric> allNodes;
+	ArrayList<NodeGeneric> allEdge;
 	 public GeneralGraph(int N) {
 		this.N=N;
 		adjMatrix=new ArrayList[N];
 		for(int i=0;i<N;++i)
 			adjMatrix[i]=new ArrayList<NodeGeneric>();
-		allNodes=new ArrayList<NodeGeneric>();
+		allEdge=new ArrayList<NodeGeneric>();
 	}
 	public void addEdge(int i, int j, int weight,boolean undirected) {
 		// TODO Auto-generated method stub
@@ -20,7 +20,7 @@ class GeneralGraph{
 		adjMatrix[i].add(nodegeneric);
 		if(undirected)
 		   adjMatrix[j].add(nodegeneric);
-		allNodes.add(nodegeneric);
+		allEdge.add(nodegeneric);
 		
 	}
 }

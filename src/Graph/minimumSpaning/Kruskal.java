@@ -25,8 +25,8 @@ public class Kruskal {
 public static ArrayList<NodeGeneric> kruskalSpanningTree(GeneralGraph g){
 	ArrayList<NodeGeneric> spanningTree=new ArrayList<NodeGeneric>();
 	UnionFind UF=new UnionFind(g.N);
-	Collections.sort(g.allNodes, NodeGeneric.SORT_BY_WEIGHT);
-	for(NodeGeneric node:g.allNodes){
+	Collections.sort(g.allEdge, NodeGeneric.SORT_BY_WEIGHT);
+	for(NodeGeneric node:g.allEdge){
 		if(!UF.connected(node.u,node.v)){
 			spanningTree.add(node);
 			UF.union(node.u, node.v);
