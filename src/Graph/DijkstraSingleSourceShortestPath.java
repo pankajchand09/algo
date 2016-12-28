@@ -61,9 +61,9 @@ class Graph{
 				minHeapify(allNodes, i,allNodes.size());
 			while(!allNodes.isEmpty()){
 				int n=extractMin(allNodes);
-				System.out.println(n);
+				//System.out.println(n);
 				for(Node adjElement:adjacent.get(n))
-				{System.out.println(adjElement.v);
+				{//System.out.println(adjElement.v);
 					if(dis[adjElement.v]>dis[n]+adjElement.w)
 						{dis[adjElement.v]=dis[n]+adjElement.w;
 						parentsOfNode[adjElement.v]=n;
