@@ -20,7 +20,7 @@ public class BFS extends UtilityGetDataPrintRoute {
 
 int node=8;
 int source=1,destination=7;
-List<Integer>[] adjacentList=getGraphData(node);
+List<Integer>[] adjacentList=getGraphData(node,"BFSdata.txt",true);
 int parents[]=new int[node],d[]=new int[node];
 
 for(int i=0;i<parents.length;++i)
