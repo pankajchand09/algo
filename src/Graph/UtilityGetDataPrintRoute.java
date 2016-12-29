@@ -9,10 +9,10 @@ import java.util.List;
 
 public abstract class UtilityGetDataPrintRoute {
 
-	public static List<Integer>[] getGraphData(int node) throws NumberFormatException, IOException{
-		BufferedReader reader=new BufferedReader(new  FileReader("BFSdata.txt"));
+	public static List<Integer>[] getGraphData(int node,String file,boolean undirected) throws NumberFormatException, IOException{
+		BufferedReader reader=new BufferedReader(new  FileReader(file));
 		List<Integer>[] adjacentList=new LinkedList[node];
-		boolean undirected=true;
+		//boolean undirected=true;
 		for(int i=0;i<adjacentList.length;++i)
 			adjacentList[i]=new LinkedList<Integer>();
 		int parents[]=new int[node],d[]=new int[node];
